@@ -278,7 +278,8 @@ section#portfolio {
     right: 0;
     margin: 0 0 15px;
 }
-
+.portfolio-item {
+}
 #portfolio .portfolio-item .portfolio-link {
     display: block;
     position: relative;
