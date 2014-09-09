@@ -170,6 +170,81 @@ header .intro-text .skills {
     border-bottom: 4px solid #f90;
 }
 
+.triangle-topleft {
+    z-index: 600;
+    position: fixed;
+    left:0%;
+    top:192px;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+}
+.triangle-topleft:before {
+    content:'';
+    border-top: 80px solid #f90;
+    border-right: 80px solid transparent;
+}
+.triangle-text {
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg) translateZ(0px);
+    // Put onto GPU as text is rendered better this way. transform: rotate(-45deg) translateZ(0px);
+    z-index: 601;
+    color:#222;
+    font-size:28px;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    left:9px;
+    top: 115px;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+}
+.triangle-shrink {
+    position: fixed;
+    left:0%;
+    top:161px;
+
+}
+.triangle-text-shrink {
+    position: fixed;
+    left:9px;
+    top: 84px;
+}
+.triangle-text:hover{
+    color:#222;
+    text-decoration: none;
+    font-size:30px;
+}
+@media(max-width:767px) {
+    .triangle-topleft {
+        position: fixed;
+        left:0%;
+        top:122px;
+    }
+    .triangle-topleft:before {
+        content:'';
+        border-top: 60px solid #f90;
+        border-right: 60px solid transparent;
+    }
+    .triangle-text {
+        position: fixed;
+        left:10px;
+        top: 56px;
+        font-size:22px;
+    }
+    .triangle-text:hover{
+        color:#222;
+        text-decoration: none;
+        font-size:23px;
+}
+}
+
 section {
     padding: 100px 0;
 }

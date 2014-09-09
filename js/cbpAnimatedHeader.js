@@ -1,17 +1,19 @@
 /**
- * cbpAnimatedHeader.js v1.0.0
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2013, Codrops
- * http://www.codrops.com
- */
+* cbpAnimatedHeader.js v1.0.0
+* http://www.codrops.com
+*
+* Licensed under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+*
+* Copyright 2013, Codrops
+* http://www.codrops.com
+*/
 var cbpAnimatedHeader = (function() {
 
 	var docElem = document.documentElement,
 		header = document.querySelector( '.navbar-fixed-top' ),
+		triangle = document.querySelector( '.triangle-topleft' ),
+		triangletxt = document.querySelector( '.triangle-text' ),
 		didScroll = false,
 		changeHeaderOn = 300;
 
@@ -28,8 +30,12 @@ var cbpAnimatedHeader = (function() {
 		var sy = scrollY();
 		if ( sy >= changeHeaderOn ) {
 			classie.add( header, 'navbar-shrink' );
+			classie.add( triangle, 'triangle-shrink' );
+			classie.add( triangletxt, 'triangle-text-shrink' );
 		}
 		else {
+			classie.remove( triangle, 'triangle-shrink' );
+			classie.remove( triangletxt, 'triangle-text-shrink' );
 			classie.remove( header, 'navbar-shrink' );
 		}
 		didScroll = false;
